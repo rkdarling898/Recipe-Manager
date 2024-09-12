@@ -1,5 +1,5 @@
 import Fastify from 'fastify'
-import mysql from 'mysql'
+import mysql from 'mysql2'
 
 const fastify = Fastify({
   logger: true
