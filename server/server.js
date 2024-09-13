@@ -11,18 +11,19 @@ const connection = mysql.createConnection({
     password: process.env.PASSWORD
 })
 
+connection.on('error', (err) => {
+    console.log('Could not create connection to server')
+    process.exit(1)
+})
+
+connection.connect(err => { if (err) throw err })
+
 fastify.get('/', async function handler (req, res) {
-  connection.connect(err => {
-    if (err) throw err
-
-    return { message: 'Connection failure' }
-  })
-
   return { message: 'Connection success'}
 })
 
 try {
-  await fastify.listen({ port: process.env.PORT })
+  fastify.listen({ port: process.env.PORT })
 } catch (err) {
   fastify.log.error(err)
   process.exit(1)
