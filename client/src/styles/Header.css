@@ -1,0 +1,27 @@
+header {
+    align-items: center;
+    background-color: red;
+    display: flex;
+    left: 3px;
+    min-height: 70px;
+    padding: 1rem;
+    position: fixed;
+    right: 3px;
+    top: 3px;
+}
+
+p ~ p {
+    margin-left: 1rem;
+}
+
+.header-content {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.page-links {
+    display: flex;
+}
