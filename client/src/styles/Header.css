@@ -1,13 +1,17 @@
 header {
     align-items: center;
-    background-color: red;
+    background-color: var(--rm-red);
     display: flex;
-    left: 3px;
+    left: 0px;
     min-height: 70px;
     padding: 1rem;
     position: fixed;
-    right: 3px;
-    top: 3px;
+    right: 0px;
+    top: 0px;
+}
+
+p {
+    color: white;
 }
 
 p ~ p {
